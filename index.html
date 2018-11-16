@@ -186,19 +186,19 @@
   var wizardWidth = 70;
   var getFireballSpeed = function(left) {
     if (left === true) {
-      return getFireballSpeed = 5;
+      return 5;
     } else {
-      return getFireballSpeed = 2;
+      return 3;
     }
   };
   var getWizardHeight = function() {
-    wizardWidth *= 1.337;
+    return wizardWidth *= 1.337;
   }; // как я понял, функция не всегда должна иметь параметры.
   var getWizardX = function(width) {
-    getWizardX = width / 2;
+    return getWizardX = width / 2;
   };
   var getWizardY = function(height) {
-    getWizardY = height / 0.6;
+    return getWizardY = height / 0.6;
   };
 </script>
 <script src="js/game.js"></script>
