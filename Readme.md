@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Николай Коваленко](https://up.htmlacademy.ru/javascript/16/user/194605).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Кунин](https://up.htmlacademy.ru/javascript/16/user/497465).
 
 ---
 
