@@ -1,3 +1,5 @@
+'use strict';
+
 var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
 var CLOUD_FONT = '16px PT Mono';
@@ -14,12 +16,12 @@ var TEXT_Y = 230;
 var TEXT_ALERT = 30;
 var TEXT_ALERT_GAP = 20;
 
-var renderCloud = function(ctx, x, y, color) {
+var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
-}
+};
 
-var getMaxElement = function(arr) {
+var getMaxElement = function (arr) {
   var maxElement = arr[0];
 
   for (var i = 1; i < arr.length; i++) {
@@ -42,8 +44,8 @@ window.renderStatistics = function (ctx, players, times) {
 
   ctx.fillStyle = '#000';
 
-  var playerIndex = 0;
-  var playerName = 'Вы';
+  // var playerIndex = 0;
+  // var playerName = 'Вы';
 
   var maxTime = getMaxElement(times);
 
@@ -55,6 +57,6 @@ window.renderStatistics = function (ctx, players, times) {
     } else {
       ctx.fillStyle = ('blue');
     }
-    ctx.fillRect(COLUMN_X + ((COLUMN_WIDTH + COLUMN_GAP) * i ), COLUMN_Y, COLUMN_WIDTH, (COLUMN_HEIGHT * times[i]) / maxTime);
+    ctx.fillRect(COLUMN_X + ((COLUMN_WIDTH + COLUMN_GAP) * i), COLUMN_Y, COLUMN_WIDTH, (COLUMN_HEIGHT * times[i]) / maxTime);
   }
-}
+};
