@@ -44,8 +44,10 @@ window.renderStatistics = function (ctx, players, times) {
 
   ctx.fillStyle = '#000';
 
-  // var playerIndex = 0;
-  // var playerName = 'Вы';
+  var randomNumber = function (number) {
+    var number = Math.floor(Math.random() * 255);
+    return number.toString();
+  }
 
   var maxTime = getMaxElement(times);
 
@@ -55,7 +57,7 @@ window.renderStatistics = function (ctx, players, times) {
     if (players[i] === 'Вы') {
       ctx.fillStyle = ('rgba(255, 0, 0, 1)');
     } else {
-      ctx.fillStyle = ('blue');
+      ctx.fillStyle = ('rgb(0, 0, ' + randomNumber() +')');
     }
     ctx.fillRect(COLUMN_X + ((COLUMN_WIDTH + COLUMN_GAP) * i), COLUMN_Y, COLUMN_WIDTH, (COLUMN_HEIGHT * times[i]) / maxTime);
   }
